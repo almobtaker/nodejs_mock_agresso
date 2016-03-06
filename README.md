@@ -1,6 +1,6 @@
-# Project Title
+# Mocking Agresso Web Service Using Node JS
 
-One Paragraph of project description goes here
+Application to mock an Agresso (Unit4 Business World) web service to use when developing web services for Agresso (Unit4) Business World ERP apps.
 
 ## Getting Started
 
