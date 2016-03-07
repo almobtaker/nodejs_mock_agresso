@@ -1,6 +1,42 @@
 # Mocking Agresso Web Service Using Node JS
 
-Application to mock an Agresso (Unit4 Business World) web service to use when developing web services for Agresso (Unit4) Business World ERP apps.
+Application to mock an Agresso (Unit4 Business World) web service to use when developing SOAP web services for Agresso (Unit4) Business World ERP apps.
+
+SOAP is the XML way of defining what information is sent and how.
+
+SOAP enables client applications to easily connect to remote services and invoke remote methods.
+
+A SOAP message is an ordinary XML document containing the following elements:
+
+* Envelope
+* Header
+* Body
+* Fault
+
+SOAP message structure:
+```
+<?xml version="1.0"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://www.w3.org/2001/12/soap-envelope" SOAP-ENV:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
+
+   <SOAP-ENV:Header>
+      ...
+      ...
+   </SOAP-ENV:Header>
+
+   <SOAP-ENV:Body>
+      ...
+      ...
+      <SOAP-ENV:Fault>
+         ...
+         ...
+      </SOAP-ENV:Fault>
+      ...
+   </SOAP-ENV:Body>
+
+</SOAP_ENV:Envelope>
+```
+
+For notes on how to use [option in SOAP client creation](http://stackoverflow.com/questions/20087573/node-js-and-async-module-error)
 
 ## Getting Started
 
