@@ -87,10 +87,15 @@ There are five binding styles to choose from when creating a WSDL file see, [Whi
 To understand the code I have written a few examples taken from stackoverflow mostly:
 
 1 server `app.js` ; client `appClient.js` - blocking
+
 2 server `app2.js` ; client `appClient.js` - non blocking
+
 3 server `app3.js` ; client `appClient2.js` - non blocking
+
 4 server `app4.js` ; client `appClient4.js` - blocking
+
 5 server `app5.js` ; client `appClient4.js` - non blocking
+
 
 To run, in separate windows, for example:
 ```
