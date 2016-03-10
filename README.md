@@ -40,7 +40,68 @@ For notes on how to use [option in SOAP client creation](http://stackoverflow.co
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+### Examples of SOAP use
+
+Example for app.js:
+
+wsdl `http://www.webservicex.net/globalweather.asmx?WSDL`
+
+`Client.describe()` - description of services, ports and methods as a JavaScript object
+
+Example description:
+
+```
+{
+      GlobalWeather: {                    <!-- MyService -->
+        GlobalWeatherSoap: {                <!-- MyPort -->
+          GetWeather: [Object],               <!-- MyFunction -->
+          GetCitiesByCountry: [Object] },     <!-- MyFunction -->
+        GlobalWeatherSoap12: {              <!-- MyPort -->
+          GetWeather: [Object],               <!-- MyFunction -->
+          GetCitiesByCountry: [Object]        <!-- MyFunction -->
+        }
+      }
+    }
+```
+
+That is:
+
+```
+{
+      MyService: {
+        MyPort: {
+          MyFunction: {
+            input: {
+              name: 'string'
+            }
+          }
+        }
+      }
+    }
+```
+
+
+
+There are five binding styles to choose from when creating a WSDL file see, [Which style of WSDL should I use?](http://www.ibm.com/developerworks/library/ws-whichwsdl/)
+
+To understand the code I have written a few examples taken from stackoverflow mostly:
+
+1 server `app.js` ; client `appClient.js` - blocking
+2 server `app2.js` ; client `appClient.js` - non blocking
+3 server `app3.js` ; client `appClient2.js` - non blocking
+4 server `app4.js` ; client `appClient4.js` - blocking
+5 server `app5.js` ; client `appClient4.js` - non blocking
+
+To run, in separate windows, for example:
+```
+node app
+```
+```
+node appClient
+```
+
+You should then get description of service and output.
+
 
 ### Prerequisities
 
